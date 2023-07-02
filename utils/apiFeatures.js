@@ -41,7 +41,7 @@ class APIFeatures {
   }
 
   paginate() {
-    console.log(this.queryString);
+    // console.log(this.queryString);
     const page = this.queryString.page * 1 || 1; // page number
     const limit = this.queryString.limit * 1 || 10; // number of items per page
     const skip = (page - 1) * limit; // starting page

@@ -8,13 +8,16 @@ export const updateSettings = async (data, type) => {
     let method = 'PATCH';
     switch (type) {
       case 'password':
-        url = 'http://127.0.0.1:8000/api/v1/users/updateMyPassword';
+        // url = 'http://127.0.0.1:8000/api/v1/users/updateMyPassword';
+        url = '/api/v1/users/updateMyPassword';
         break;
       case 'data':
-        url = 'http://127.0.0.1:8000/api/v1/users/updateMe';
+        // url = 'http://127.0.0.1:8000/api/v1/users/updateMe';
+        url = '/api/v1/users/updateMe';
         break;
       case 'signup':
-        url = 'http://127.0.0.1:8000/api/v1/users/signup';
+        // url = 'http://127.0.0.1:8000/api/v1/users/signup';
+        url = '/api/v1/users/signup';
         method = 'POST';
         break;
       default:
@@ -25,9 +28,9 @@ export const updateSettings = async (data, type) => {
     //   type === 'password'
     //     ? 'http://127.0.0.1:8000/api/v1/users/updateMyPassword'
     //     : 'http://127.0.0.1:8000/api/v1/users/updateMe';
-    console.log(type);
-    console.log(url);
-    console.log(`this is the data: ${data}`);
+    // console.log(type);
+    // console.log(url);
+    // console.log(`this is the data: ${data}`);
 
     const res = await axios({
       method,

@@ -17,7 +17,7 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-console.log(DB);
+// console.log(DB);
 
 mongoose
   // .connect(process.env.DATABASE_LOCAL, {

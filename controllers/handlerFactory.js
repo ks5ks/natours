@@ -6,7 +6,7 @@ exports.deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
     // if (!mongoose.Types.ObjectId.isValid(req.params.id))
     //   return next(new AppError('Invalid Id', 404));
-    console.log(req.user);
+    // console.log(req.user);
     const doc = await Model.findByIdAndDelete(req.params.id);
     if (!doc) return next(new AppError('No document found to delete', 404));
 
