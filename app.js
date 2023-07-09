@@ -31,7 +31,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 // MIDDLEWARE
 app.use(cors());
-
 app.options('*', cors());
 
 // static file location
