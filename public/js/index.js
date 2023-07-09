@@ -2,6 +2,7 @@
 import { login, logout } from './login.js';
 import { updateSettings } from './updateSettings.js';
 import { bookTour } from './stripe.js';
+import { showAlert } from './alert.js';
 
 // if this is the login page, listen for the event
 if (document.URL.includes('login')) {
@@ -120,3 +121,6 @@ if (bookBtn) {
     bookTour(tourId);
   });
 }
+
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alert) showAlert('success', alertMessage, 20);
